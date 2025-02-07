@@ -13,13 +13,26 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to share your video.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone to share your audio.",
+        "NSBluetoothPeripheralUsageDescription": "Required for Bluetooth audio devices",
+        "NSPhotoLibraryUsageDescription": "Required to use screen share feature"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ],
+      "package": "com.lakshaysharma2530.zoomvideosdk"
     },
     "web": {
       "favicon": "./assets/favicon.png"
