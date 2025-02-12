@@ -3,10 +3,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { ZoomVideoSdkProvider } from '@zoom/react-native-videosdk';
 import VideoCallScreen from './VideoCall';
+import { usePermission } from './utils';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
+  usePermission()
   return (
     <ZoomVideoSdkProvider
       config={{
